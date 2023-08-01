@@ -303,10 +303,15 @@
                     Setting</a
                   >
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="fa fa-power-off me-1 ms-1"></i> Logout</a
-                  >
+
+                  {{-- <a class="dropdown-item" href="javascript:void(0)"
+                    > Logout</a
+                  > --}}
                   <div class="dropdown-divider"></div>
+                  <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <button type="submit" class="dropdown-item"><i class="fa fa-power-off me-1 ms-1"></i>Logoutt</button>
+                  </form>
                   <div class="ps-4 p-10">
                     <a
                       href="javascript:void(0)"
